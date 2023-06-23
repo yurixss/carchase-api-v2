@@ -4,9 +4,15 @@ import CarsValidator from 'App/Validators/CarValidator'
 // eslint-disable-next-line prettier/prettier
 export default class CarsController {
   public async index({ response }) {
-    const CarsIndex = await Cars.all()
+    try {
+      const carsIndex = await Cars.all()
 
-    return response.ok(CarsIndex)
+      return response.ok({ data: carsIndex })
+    } catch (error) {
+      console.error(error)
+
+      return response.status(500).send({ error: 'Erro ao buscar carros' })
+    }
   }
 
   public async store({ request, response }) {

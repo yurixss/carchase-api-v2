@@ -12,6 +12,7 @@ export default class Cars extends BaseSchema {
       table.integer('year').notNullable()
       table.decimal('price', 10, 2).notNullable()
       table.string('km').notNullable()
+      table.string('image', 255).nullable()
       table.timestamp('created_at', { useTz: true })
       table.timestamp('updated_at', { useTz: true })
     })

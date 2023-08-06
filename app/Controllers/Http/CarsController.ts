@@ -16,7 +16,7 @@ export default class CarsController {
   }
 
   public async store({ request, response }) {
-    const { name, model, color, year, price, km } = await request.validate(CarsValidator)
+    const { name, model, color, year, price, km, image } = await request.validate(CarsValidator)
 
     const Car = new Cars()
 
@@ -27,6 +27,7 @@ export default class CarsController {
       year,
       price,
       km,
+      image,
     })
 
     try {

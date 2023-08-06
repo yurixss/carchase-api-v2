@@ -23,6 +23,9 @@ export default class Cars extends BaseModel {
   @column()
   public km: string
 
+  @column()
+  public image?: string
+
   @column.dateTime({ autoCreate: true })
   public createdAt: DateTime
 

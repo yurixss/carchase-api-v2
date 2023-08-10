@@ -7,7 +7,7 @@ export default class CarsController {
     try {
       const carsIndex = await Cars.all()
 
-      return response.ok({ data: carsIndex })
+      return response.ok(carsIndex)
     } catch (error) {
       console.error(error)
 

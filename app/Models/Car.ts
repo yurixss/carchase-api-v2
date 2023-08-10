@@ -18,7 +18,7 @@ export default class Cars extends BaseModel {
   public year: number
 
   @column()
-  public price: number
+  public price: string
 
   @column()
   public km: string

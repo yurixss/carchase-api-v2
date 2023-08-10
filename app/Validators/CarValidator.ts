@@ -6,7 +6,7 @@ export default class CarsValidator {
     model: schema.string({ trim: true }),
     color: schema.string({ trim: true }),
     year: schema.number.optional(),
-    price: schema.number.optional(),
+    price: schema.string.optional(),
     km: schema.string({ trim: true }),
   })
 }

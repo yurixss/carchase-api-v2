@@ -21,6 +21,7 @@
 import Route from '@ioc:Adonis/Core/Route'
 
 import './routes/cars.ts'
+import './routes/brands.ts'
 
 Route.get('/', async () => {
   return { hello: 'world' }

@@ -26,6 +26,24 @@ export default class Cars extends BaseModel {
   @column()
   public image?: string
 
+  @column()
+  public is_new: string
+
+  @column()
+  public brand_id: number
+
+  @column()
+  public category_id: number
+
+  @column()
+  public user_id: number
+
+  @column()
+  public status: string
+
+  @column()
+  public description: string
+
   @column.dateTime({ autoCreate: true })
   public createdAt: DateTime
 
